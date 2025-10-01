@@ -1,0 +1,47 @@
+[
+  {
+    "id_product": 1,
+    "name": "Matcha Green Tea",
+    "description": "Premium Japanese matcha powder, rich in antioxidants and perfect for lattes or traditional tea ceremonies.",
+    "price": 12.50,
+    "unity": "100g",
+    "stock_quantity": 50,
+    "image_url": "https://example.com/images/matcha.jpg"
+  },
+  {
+    "id_product": 2,
+    "name": "Sencha Green Tea",
+    "description": "Classic Japanese green tea with a fresh, grassy flavor and vibrant aroma.",
+    "price": 8.90,
+    "unity": "50g",
+    "stock_quantity": 80,
+    "image_url": "https://example.com/images/sencha.jpg"
+  },
+  {
+    "id_product": 3,
+    "name": "Earl Grey Black Tea",
+    "description": "Aromatic black tea infused with bergamot oil, smooth and refreshing.",
+    "price": 6.75,
+    "unity": "100g",
+    "stock_quantity": 100,
+    "image_url": "https://example.com/images/earlgrey.jpg"
+  },
+  {
+    "id_product": 4,
+    "name": "Chamomile Herbal Tea",
+    "description": "Relaxing herbal infusion made from dried chamomile flowers, naturally caffeine-free.",
+    "price": 5.50,
+    "unity": "50g",
+    "stock_quantity": 60,
+    "image_url": "https://example.com/images/chamomile.jpg"
+  },
+  {
+    "id_product": 5,
+    "name": "Oolong Tea",
+    "description": "Traditional Chinese semi-oxidized tea with floral and fruity notes.",
+    "price": 9.20,
+    "unity": "75g",
+    "stock_quantity": 40,
+    "image_url": "https://example.com/images/oolong.jpg"
+  }
+]
