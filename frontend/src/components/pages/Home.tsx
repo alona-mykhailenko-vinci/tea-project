@@ -1,4 +1,4 @@
-import Navbar from '../components/Navbar';
+import Navbar from '../Navbar';
 import { Box, Container, VStack, Heading, Text } from '@chakra-ui/react';
 
 const Home = () => {

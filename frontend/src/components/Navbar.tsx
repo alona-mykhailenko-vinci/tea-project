@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import { Box, Flex, Heading, HStack, Link as ChakraLink } from '@chakra-ui/react';
+import { Box, Flex, Heading, HStack } from '@chakra-ui/react';
 
 const Navbar = () => {
+
   return (
     <Box as="nav" bg="#4F493F" color="white" px={4} py={3} shadow="md">
       <Flex maxW="container.xl" mx="auto" align="center" justify="space-between">
@@ -11,16 +12,26 @@ const Navbar = () => {
           </Heading>
         </Link>
         <HStack gap={6}>
-          <Link to="/" style={{ textDecoration: 'none' }}>
-            <ChakraLink color="white" fontWeight="400" fontFamily="'Montserrat', sans-serif" _hover={{ color: 'green.100' }}>
+          <Box 
+            color="white" 
+            fontWeight="400" 
+            fontFamily="'Montserrat', sans-serif"
+            _hover={{ color: 'green.100' }}
+          >
+            <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
               Home
-            </ChakraLink>
-          </Link>
-          <Link to="/products" style={{ textDecoration: 'none' }}>
-            <ChakraLink color="white" fontWeight="400" fontFamily="'Montserrat', sans-serif" _hover={{ color: 'green.100' }}>
+            </Link>
+          </Box>
+          <Box 
+            color="white" 
+            fontWeight="400" 
+            fontFamily="'Montserrat', sans-serif"
+            _hover={{ color: 'green.100' }}
+          >
+            <Link to="/products" style={{ textDecoration: 'none', color: 'inherit' }}>
               Products
-            </ChakraLink>
-          </Link>
+            </Link>
+          </Box>
         </HStack>
       </Flex>
     </Box>

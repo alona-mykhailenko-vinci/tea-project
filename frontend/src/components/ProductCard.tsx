@@ -1,7 +1,14 @@
 import { Box, Image, Text, Button } from '@chakra-ui/react';
+import { useProductContext } from '../context/ProductContext';
 import type { ProductCardProps } from '../types';
 
 const ProductCard = ({ product }: ProductCardProps) => {
+  const { setSelectedProduct } = useProductContext();
+
+  const handleSelectProduct = () => {
+    setSelectedProduct(product);
+  };
+
   return (
     <Box
       bg="white"
@@ -61,8 +68,9 @@ const ProductCard = ({ product }: ProductCardProps) => {
         }}
         size="sm"
         height="auto"
+        onClick={handleSelectProduct}
       >
-        + ADD
+        SELECT
       </Button>
     </Box>
   );
