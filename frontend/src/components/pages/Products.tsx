@@ -1,12 +1,6 @@
-import {
-  Box,
-  Container,
-  Heading,
-  Text,
-  Spinner
-} from '@chakra-ui/react';
 import Navbar from '../Navbar';
 import ProductCard from '../ProductCard';
+import { Spinner } from '../ui/spinner';
 import { useProducts } from '../../hooks/useProducts';
 
 const Products = () => {
@@ -14,72 +8,61 @@ const Products = () => {
 
   if (loading) {
     return (
-      <Box minH="100vh" bg="gray.50">
+      <div className="min-h-screen bg-gray-50">
         <Navbar />
-        <Container maxW="container.xl" py={8}>
-          <Box display="flex" flexDirection="column" alignItems="center" gap={4}>
-            <Spinner size="xl" color="green.500" />
-            <Text fontSize="lg" fontFamily="'Montserrat', sans-serif">Loading products...</Text>
-          </Box>
-        </Container>
-      </Box>
+        <div className="container py-8">
+          <div className="flex flex-col items-center gap-4">
+            <Spinner size="lg" />
+            <p className="text-lg">Loading products...</p>
+          </div>
+        </div>
+      </div>
     );
   }
 
   if (error) {
     return (
-      <Box minH="100vh" bg="gray.50">
+      <div className="min-h-screen bg-gray-50">
         <Navbar />
-        <Container maxW="container.xl" py={8}>
-          <Box bg="red.50" border="1px solid" borderColor="red.200" borderRadius="md" p={4}>
-            <Text color="red.600" fontFamily="'Montserrat', sans-serif">{error}</Text>
-          </Box>
-        </Container>
-      </Box>
+        <div className="container py-8">
+          <div className="bg-red-50 border border-red-200 rounded-md p-4">
+            <p className="text-red-600">{error}</p>
+          </div>
+        </div>
+      </div>
     );
   }
 
   return (
-    <Box minH="100vh" bg="gray.50">
+    <div className="min-h-screen bg-gray-50">
       <Navbar />
-      <Container maxW="container.xl" py={8}>
-        <Box textAlign="center" mb={10}>
-          <Heading as="h1" size="2xl" color="#4F493F" mb={4} fontFamily="'Montserrat', sans-serif" fontWeight="600">
+      <div className="container py-8">
+        <div className="text-center mb-10">
+          <h1 className="text-2xl tea-heading mb-4 font-semibold">
             Our Tea Collection
-          </Heading>
-          <Text fontSize="lg" color="gray.600" fontFamily="'Montserrat', sans-serif">
+          </h1>
+          <p className="text-lg text-gray-600">
             Discover our premium selection of teas from around the world
-          </Text>
-        </Box>
+          </p>
+        </div>
         
-        <Box 
-          display="flex" 
-          justifyContent="center" 
-          width="100%"
-        >
-          <Box 
-            display="grid" 
-            gridTemplateColumns="repeat(4, 1fr)" 
-            gap="10px"
-            maxWidth="1000px"
-            width="100%"
-            justifyItems="center"
-          >
+        <div className="flex justify-center w-full">
+          <div className="grid grid-cols-4 gap-4 max-w-5xl w-full">
             {products.map((product) => (
               <ProductCard key={product.id_product} product={product} />
             ))}
-          </Box>
-        </Box>
+          </div>
+        </div>
         
         {products.length === 0 && !loading && (
-          <Box textAlign="center" py={10}>
-            <Text fontSize="lg" color="gray.500" fontFamily="'Montserrat', sans-serif">
+          <div className="text-center py-10">
+            <p className="text-lg text-gray-500">
               No products available at the moment.
-            </Text>
-          </Box>
+            </p>
+          </div>
         )}
-      </Container>
-    </Box>
+      </div>
+    </div>
   );
 };
 

@@ -1,344 +1,198 @@
-/* General Styles for TeaShop Project */
+/* Shadcn UI Base Styles for TeaShop Project */
 
 /* Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@100;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@100;200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
-/* CSS Variables for Design System */
+/* Shadcn UI CSS Variables */
 :root {
-  /* Colors */
-  --color-primary: #38A169;       /* green.600 */
-  --color-primary-light: #68D391; /* green.400 */
-  --color-primary-dark: #2F855A;  /* green.700 */
-  --color-secondary: #E6FFFA;     /* green.50 */
-  --color-text-primary: #1A202C;  /* gray.800 */
-  --color-text-secondary: #718096; /* gray.500 */
-  --color-background: #F7FAFC;    /* gray.50 */
-  --color-white: #FFFFFF;
-  --color-error: #E53E3E;         /* red.500 */
-  --color-success: #38A169;       /* green.500 */
-  --color-warning: #ED8936;       /* orange.500 */
-
-  /* Typography */
-  --font-family-primary: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  --font-size-xs: 0.75rem;     /* 12px */
-  --font-size-sm: 0.875rem;    /* 14px */
-  --font-size-base: 1rem;      /* 16px */
-  --font-size-lg: 1.125rem;    /* 18px */
-  --font-size-xl: 1.25rem;     /* 20px */
-  --font-size-2xl: 1.5rem;     /* 24px */
-  --font-size-3xl: 1.875rem;   /* 30px */
-  --font-size-4xl: 2.25rem;    /* 36px */
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-
-  /* Spacing */
-  --spacing-xs: 0.25rem;       /* 4px */
-  --spacing-sm: 0.5rem;        /* 8px */
-  --spacing-md: 1rem;          /* 16px */
-  --spacing-lg: 1.5rem;        /* 24px */
-  --spacing-xl: 2rem;          /* 32px */
-  --spacing-2xl: 3rem;         /* 48px */
-  --spacing-3xl: 4rem;         /* 64px */
-
-  /* Border Radius */
-  --radius-sm: 0.25rem;        /* 4px */
-  --radius-md: 0.5rem;         /* 8px */
-  --radius-lg: 0.75rem;        /* 12px */
-  --radius-xl: 1rem;           /* 16px */
-
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-
-  /* Animation */
-  --transition-fast: 150ms ease-in-out;
-  --transition-normal: 250ms ease-in-out;
-  --transition-slow: 350ms ease-in-out;
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 142 76% 36%;  /* Green color for tea theme */
+  --primary-foreground: 355.7 100% 97.3%;
+  --secondary: 210 40% 98%;
+  --secondary-foreground: 222.2 84% 4.9%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96%;
+  --accent-foreground: 222.2 84% 4.9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 142 76% 36%;
+  --radius: 0.5rem;
+  
+  /* Custom tea theme colors */
+  --tea-brown: 25 47% 31%;      /* #4F493F - navbar color */
+  --tea-green: 142 76% 36%;     /* Primary green */
+  --tea-green-light: 142 69% 58%; /* Lighter green for hover */
 }
 
-/* Reset and Base Styles */
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 84% 4.9%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 212.7 26.8% 83.9%;
+}
+
+/* Base Reset */
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-  font-size: 16px;
 }
 
 body {
-  font-family: var(--font-family-primary);
-  font-weight: var(--font-weight-normal);
-  line-height: 1.6;
-  color: var(--color-text-primary);
-  background-color: var(--color-background);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-feature-settings: "rlig" 1, "calt" 1;
 }
 
-/* Typography Utilities */
-.text-primary {
-  color: var(--color-primary);
-}
-
-.text-secondary {
-  color: var(--color-text-secondary);
-}
-
-.text-center {
-  text-align: center;
-}
-
-.font-light {
-  font-weight: var(--font-weight-light);
-}
-
-.font-normal {
-  font-weight: var(--font-weight-normal);
-}
-
-.font-medium {
-  font-weight: var(--font-weight-medium);
-}
-
-.font-semibold {
-  font-weight: var(--font-weight-semibold);
-}
-
-.font-bold {
-  font-weight: var(--font-weight-bold);
-}
-
-/* Layout Utilities */
+/* Utility Classes */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--spacing-md);
+  padding: 0 1rem;
 }
 
 .flex {
   display: flex;
 }
 
-.flex-center {
-  display: flex;
+.items-center {
   align-items: center;
-  justify-content: center;
 }
 
-.flex-between {
-  display: flex;
-  align-items: center;
+.justify-between {
   justify-content: space-between;
 }
 
-.grid {
-  display: grid;
-}
-
-.hidden {
-  display: none;
-}
-
-/* Spacing Utilities */
-.m-0 { margin: 0; }
-.m-1 { margin: var(--spacing-xs); }
-.m-2 { margin: var(--spacing-sm); }
-.m-4 { margin: var(--spacing-md); }
-.m-6 { margin: var(--spacing-lg); }
-.m-8 { margin: var(--spacing-xl); }
-
-.p-0 { padding: 0; }
-.p-1 { padding: var(--spacing-xs); }
-.p-2 { padding: var(--spacing-sm); }
-.p-4 { padding: var(--spacing-md); }
-.p-6 { padding: var(--spacing-lg); }
-.p-8 { padding: var(--spacing-xl); }
-
-/* Button Base Styles */
-.btn {
-  display: inline-flex;
-  align-items: center;
+.justify-center {
   justify-content: center;
-  padding: var(--spacing-sm) var(--spacing-md);
-  border: none;
-  border-radius: var(--radius-md);
-  font-family: var(--font-family-primary);
-  font-weight: var(--font-weight-medium);
-  text-decoration: none;
-  cursor: pointer;
-  transition: all var(--transition-normal);
-  outline: none;
 }
 
-.btn:focus {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
+.flex-col {
+  flex-direction: column;
 }
 
-.btn-primary {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+.gap-2 { gap: 0.5rem; }
+.gap-4 { gap: 1rem; }
+.gap-6 { gap: 1.5rem; }
+.gap-8 { gap: 2rem; }
+
+.p-4 { padding: 1rem; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+.py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-3 { margin-bottom: 0.75rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-10 { margin-bottom: 2.5rem; }
+
+.text-center { text-align: center; }
+.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-semibold { font-weight: 600; }
+
+.min-h-screen { min-height: 100vh; }
+.w-full { width: 100%; }
+.max-w-5xl { max-width: 64rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+.grid { display: grid; }
+.grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+.shadow-md { box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); }
+
+.bg-gray-50 { background-color: rgb(249 250 251); }
+.bg-white { background-color: rgb(255 255 255); }
+.bg-red-50 { background-color: rgb(254 242 242); }
+
+.border { border-width: 1px; }
+.border-gray-200 { border-color: rgb(229 231 235); }
+.border-red-200 { border-color: rgb(254 202 202); }
+
+.rounded-md { border-radius: calc(var(--radius) - 2px); }
+
+.text-red-600 { color: rgb(220 38 38); }
+.text-gray-600 { color: rgb(75 85 99); }
+.text-gray-800 { color: rgb(31 41 55); }
+.text-gray-500 { color: rgb(107 114 128); }
+
+/* Tea theme specific styles */
+.tea-navbar {
+  background-color: hsl(var(--tea-brown));
+  color: white;
 }
 
-.btn-primary:hover {
-  background-color: var(--color-primary-dark);
-  transform: translateY(-1px);
+.tea-heading {
+  color: hsl(var(--tea-green));
 }
 
-.btn-secondary {
-  background-color: var(--color-white);
-  color: var(--color-primary);
-  border: 1px solid var(--color-primary);
+.tea-text {
+  color: hsl(var(--muted-foreground));
 }
 
-.btn-secondary:hover {
-  background-color: var(--color-secondary);
-}
+/* Additional utility classes */
+.no-underline { text-decoration: none; }
+.transition-colors { transition: color 0.15s ease-in-out; }
+.hover\:text-green-100:hover { color: rgb(220 252 231); }
+.leading-relaxed { line-height: 1.625; }
+.max-w-2xl { max-width: 42rem; }
 
-/* Card Styles */
-.card {
-  background-color: var(--color-white);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  overflow: hidden;
-  transition: all var(--transition-normal);
-}
-
-.card:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-2px);
-}
-
-.card-body {
-  padding: var(--spacing-lg);
-}
-
-/* Form Styles */
-.form-group {
-  margin-bottom: var(--spacing-md);
-}
-
-.form-label {
-  display: block;
-  margin-bottom: var(--spacing-xs);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text-primary);
-}
-
-.form-input {
-  width: 100%;
-  padding: var(--spacing-sm) var(--spacing-md);
-  border: 1px solid #E2E8F0;
-  border-radius: var(--radius-md);
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-base);
-  transition: border-color var(--transition-fast);
-}
-
-.form-input:focus {
-  outline: none;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(56, 161, 105, 0.1);
-}
-
-/* Animation Classes */
-.fade-in {
-  animation: fadeIn var(--transition-slow) ease-in-out;
-}
-
-.slide-up {
-  animation: slideUp var(--transition-normal) ease-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
+/* Animation for spinner */
+@keyframes spin {
   to {
-    opacity: 1;
+    transform: rotate(360deg);
   }
 }
 
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Responsive grid */
+@media (max-width: 1024px) {
+  .grid-cols-4 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-  :root {
-    --font-size-4xl: 1.875rem;   /* 30px on mobile */
-    --font-size-3xl: 1.5rem;     /* 24px on mobile */
-  }
-
-  .container {
-    padding: 0 var(--spacing-sm);
-  }
-
-  .btn {
-    padding: var(--spacing-sm);
-    font-size: var(--font-size-sm);
-  }
-
-  .card-body {
-    padding: var(--spacing-md);
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 480px) {
-  html {
-    font-size: 14px;
-  }
-
-  .container {
-    padding: 0 var(--spacing-xs);
-  }
-}
-
-/* Accessibility */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-/* Focus styles for keyboard navigation */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus,
-select:focus {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
-}
-
-/* Print styles */
-@media print {
-  * {
-    box-shadow: none !important;
-  }
-  
-  body {
-    background-color: white !important;
-    color: black !important;
+  .grid-cols-4 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }

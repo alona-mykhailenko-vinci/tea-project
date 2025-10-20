@@ -1,26 +1,25 @@
 import Navbar from '../Navbar';
-import { Box, Container, VStack, Heading, Text } from '@chakra-ui/react';
 
 const Home = () => {
   return (
-    <Box minH="100vh" bg="gray.50">
+    <div className="min-h-screen bg-gray-50">
       <Navbar />
-      <Container maxW="container.xl" py={20}>
-        <VStack gap={8} textAlign="center">
-          <Heading as="h1" size="4xl" color="green.700" fontWeight="600" fontFamily="'Montserrat', sans-serif">
+      <div className="container py-20">
+        <div className="flex flex-col items-center gap-8 text-center">
+          <h1 className="text-4xl tea-heading font-semibold">
             TeaShop
-          </Heading>
-          <Heading as="h2" size="xl" color="green.600" fontWeight="400" fontFamily="'Montserrat', sans-serif">
+          </h1>
+          <h2 className="text-xl tea-heading font-normal">
             Welcome to our premium tea collection
-          </Heading>
-          <Text fontSize="lg" color="gray.600" maxW="2xl" lineHeight="tall" fontFamily="'Montserrat', sans-serif">
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl leading-relaxed">
             Discover the finest selection of teas from around the world. 
             From traditional green teas to exotic herbal blends, we have 
             something special for every tea lover.
-          </Text>
-        </VStack>
-      </Container>
-    </Box>
+          </p>
+        </div>
+      </div>
+    </div>
   );
 };
 
