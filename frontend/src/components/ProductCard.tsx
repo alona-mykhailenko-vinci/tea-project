@@ -1,4 +1,3 @@
-import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 import { useProductContext } from '../context/ProductContext';
 import type { ProductCardProps } from '../types';
@@ -25,24 +24,22 @@ const ProductCard = ({ product }: ProductCardProps) => {
         />
 
         {/* Product Name */}
-        <p className="text-sm font-light text-tea-dark text-center mb-1">
+        <p className="text-sm text-charcoal text-center mb-1">
           {product.name}
         </p>
         
         {/* Product Price */}
-        <p className="text-sm text-tea-medium mb-3">
+        <p className="text-sm font-light text-charcoal mb-3">
           ${product.price.toFixed(2)}
         </p>
 
-        {/* Add Button */}
-        <Button
-          variant="outline"
-          size="sm"
-          className="text-xs px-3 py-1 h-auto border-tea-medium text-tea-medium hover:bg-tea-medium hover:text-white"
+        {/* Select Text */}
+        <span
+          className="text-sm text-charcoal cursor-pointer hover:underline transition-colors"
           onClick={handleSelectProduct}
         >
-          SELECT
-        </Button>
+          select
+        </span>
       </CardContent>
     </Card>
   );

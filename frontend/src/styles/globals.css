@@ -34,6 +34,8 @@
   --tea-medium: 25 23% 56%;        /* #A78D78 - light brown */
   --tea-light: 36 15% 71%;         /* #BEB5A9 - beige */
   --tea-lightest: 36 31% 82%;      /* #E1D4C2 - lightest beige */
+  --charcoal: 345 7% 16%;          /* #2C2627 - dark charcoal */
+      
 }
 
 .dark {
@@ -152,7 +154,7 @@ body {
 
 /* Tea theme specific styles */
 .tea-navbar {
-  background-color: hsl(var(--tea-darkest));
+  background-color: hsl(var(--charcoal));
   color: hsl(var(--tea-lightest));
 }
 
@@ -176,6 +178,7 @@ body {
 .text-tea-medium { color: hsl(var(--tea-medium)); }
 .text-tea-light { color: hsl(var(--tea-light)); }
 .text-tea-lightest { color: hsl(var(--tea-lightest)); }
+.text-charcoal { color: hsl(var(--charcoal)); }
 
 .border-tea-light { border-color: hsl(var(--tea-light)); }
 .border-tea-medium { border-color: hsl(var(--tea-medium)); }
@@ -193,6 +196,8 @@ body {
 .hover\:text-tea-light:hover { color: hsl(var(--tea-light)); }
 .leading-relaxed { line-height: 1.625; }
 .max-w-2xl { max-width: 42rem; }
+.hover\:underline:hover { text-decoration: underline; }
+.cursor-pointer { cursor: pointer; }
 
 /* Animation for spinner */
 @keyframes spin {

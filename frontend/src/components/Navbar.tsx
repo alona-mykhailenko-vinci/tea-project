@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav className="bg-tea-dark px-4 py-3 shadow-md">
+    <nav className="tea-navbar px-4 py-3 shadow-md">
       <div className="container flex items-center justify-between">
         <Link to="/" className="text-tea-lightest no-underline">
           <h1 className="text-xl font-semibold text-tea-lightest hover:text-tea-light transition-colors">

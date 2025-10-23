@@ -6,7 +6,7 @@
     "price": 12.50,
     "unity": "100g",
     "stock_quantity": 50,
-    "image_url": "https://example.com/images/matcha.jpg"
+    "image_url": "/images/matcha-tea.png"
   },
   {
     "id_product": 2,
@@ -15,25 +15,25 @@
     "price": 8.90,
     "unity": "50g",
     "stock_quantity": 80,
-    "image_url": "https://example.com/images/sencha.jpg"
+    "image_url": "/images/sencha-tea.png"
   },
   {
     "id_product": 3,
-    "name": "Earl Grey Black Tea",
-    "description": "Aromatic black tea infused with bergamot oil, smooth and refreshing.",
+    "name": "Thai Green Tea",
+    "description": "Aromatic green tea from Thailand, smooth and refreshing with a delicate flavor.",
     "price": 6.75,
     "unity": "100g",
     "stock_quantity": 100,
-    "image_url": "https://example.com/images/earlgrey.jpg"
+    "image_url": "/images/thai-green-tea.png"
   },
   {
     "id_product": 4,
-    "name": "Chamomile Herbal Tea",
+    "name": "Li Tiao Tea",
     "description": "Relaxing herbal infusion made from dried chamomile flowers, naturally caffeine-free.",
     "price": 5.50,
     "unity": "50g",
     "stock_quantity": 60,
-    "image_url": "https://example.com/images/chamomile.jpg"
+    "image_url": "/images/li-tiao-tea.png"
   },
   {
     "id_product": 5,
@@ -42,6 +42,6 @@
     "price": 9.20,
     "unity": "75g",
     "stock_quantity": 40,
-    "image_url": "https://example.com/images/oolong.jpg"
+    "image_url": "/images/oolong-tea.png"
   }
 ]
