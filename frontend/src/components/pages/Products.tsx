@@ -8,12 +8,12 @@ const Products = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen">
         <Navbar />
         <div className="container py-8">
           <div className="flex flex-col items-center gap-4">
             <Spinner size="lg" />
-            <p className="text-lg">Loading products...</p>
+            <p className="text-lg text-tea-dark">Loading products...</p>
           </div>
         </div>
       </div>
@@ -22,7 +22,7 @@ const Products = () => {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen">
         <Navbar />
         <div className="container py-8">
           <div className="bg-red-50 border border-red-200 rounded-md p-4">
@@ -34,14 +34,14 @@ const Products = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       <Navbar />
       <div className="container py-8">
         <div className="text-center mb-10">
-          <h1 className="text-2xl tea-heading mb-4 font-semibold">
+          <h1 className="text-2xl text-tea-dark mb-4 font-semibold">
             Our Tea Collection
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-tea-medium">
             Discover our premium selection of teas from around the world
           </p>
         </div>
@@ -56,7 +56,7 @@ const Products = () => {
         
         {products.length === 0 && !loading && (
           <div className="text-center py-10">
-            <p className="text-lg text-gray-500">
+            <p className="text-lg text-tea-medium">
               No products available at the moment.
             </p>
           </div>

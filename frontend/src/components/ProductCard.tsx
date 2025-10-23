@@ -11,7 +11,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   };
 
   return (
-    <Card className="bg-white border border-gray-200 p-4 flex flex-col items-center">
+    <Card className="bg-white border-tea-light p-4 flex flex-col items-center hover:shadow-lg transition-shadow">
       <CardContent className="p-0 flex flex-col items-center w-full">
         {/* Product Image */}
         <img
@@ -25,12 +25,12 @@ const ProductCard = ({ product }: ProductCardProps) => {
         />
 
         {/* Product Name */}
-        <p className="text-sm font-light text-gray-800 text-center mb-1">
+        <p className="text-sm font-light text-tea-dark text-center mb-1">
           {product.name}
         </p>
         
         {/* Product Price */}
-        <p className="text-sm text-gray-600 mb-3">
+        <p className="text-sm text-tea-medium mb-3">
           ${product.price.toFixed(2)}
         </p>
 
@@ -38,7 +38,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         <Button
           variant="outline"
           size="sm"
-          className="text-xs px-3 py-1 h-auto"
+          className="text-xs px-3 py-1 h-auto border-tea-medium text-tea-medium hover:bg-tea-medium hover:text-white"
           onClick={handleSelectProduct}
         >
           SELECT
