@@ -41,9 +41,6 @@ const Products = () => {
           <h1 className="text-2xl text-tea-dark mb-4 font-semibold">
             Our Tea Collection
           </h1>
-          <p className="text-lg text-tea-medium">
-            Discover our premium selection of teas from around the world
-          </p>
         </div>
         
         <div className="flex justify-center w-full">
